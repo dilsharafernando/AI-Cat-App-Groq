@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple AI Cat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="cat-header">
+      <div class="cat-face" id="catFace">🐱</div>
+      <h2>AI Cat</h2>
+    </div>
+
+    <!-- Provider Switcher Only -->
+    <div class="settings">
+      <select id="provider">
+        <option value="groq">Groq AI</option>
+        <option value="gemini">Gemini AI</option>
+      </select>
+    </div>
+
+    <!-- Chat Box -->
+    <div class="chat-box" id="chatBox">
+      <div class="msg bot">Meow! I'm ready to chat! 🐾</div>
+    </div>
+
+    <!-- Input Area -->
+    <form id="chatForm" class="input-area">
+      <input type="text" id="userInput" placeholder="Say something..." required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at top, #24070c 0%, #09090b 65%, #050507 100%);
+  color: #f4f4f5;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: linear-gradient(180deg, #141418 0%, #0c0c0f 100%);
+  width: 420px;
+  padding: 22px;
+  border-radius: 16px;
+  border: 1.5px solid #ef4444;
+  box-shadow: 0 0 28px rgba(239, 68, 68, 0.25), inset 0 0 18px rgba(239, 68, 68, 0.08);
+  position: relative;
+}
+
+/* Header */
+.cat-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.cat-face {
+  font-size: 52px;
+  display: inline-block;
+  filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.7));
+  animation: pulseCat 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseCat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+.cat-header h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.65);
+  margin-top: 4px;
+}
+
+/* Provider Dropdown */
+.settings {
+  margin-bottom: 14px;
+}
+
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #991b1b;
+  background: #18181d;
+  color: #fca5a5;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.15);
+  transition: 0.2s;
+}
+
+select:hover, select:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.35);
+}
+
+/* Chat Box with Subtle Cyber Grid */
+.chat-box {
+  height: 290px;
+  overflow-y: auto;
+  background-color: #0b0b0e;
+  background-image: 
+    linear-gradient(rgba(239, 68, 68, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239, 68, 68, 0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #450a0a;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Custom Red Scrollbar */
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-box::-webkit-scrollbar-track {
+  background: #0b0b0e;
+}
+.chat-box::-webkit-scrollbar-thumb {
+  background: #991b1b;
+  border-radius: 4px;
+}
+.chat-box::-webkit-scrollbar-thumb:hover {
+  background: #ef4444;
+}
+
+/* Message Bubbles */
+.msg {
+  padding: 9px 13px;
+  border-radius: 10px;
+  max-width: 82%;
+  font-size: 13.5px;
+  line-height: 1.45;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #450a0a, #7f1d1d);
+  border: 1px solid #ef4444;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+  border-bottom-right-radius: 3px;
+}
+
+.bot {
+  align-self: flex-start;
+  background: #16161b;
+  border: 1px solid #7f1d1d;
+  color: #e4e4e7;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.15);
+  border-bottom-left-radius: 3px;
+}
+
+/* Input Area & Glowing Send Button */
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1px solid #3f3f46;
+  background: #16161b;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input-area input::placeholder {
+  color: #71717a;
+}
+
+.input-area input:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+}
+
+button {
+  padding: 11px 20px;
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #ffffff;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.55);
+  transition: 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #f87171, #dc2626);
+  box-shadow: 0 0 22px rgba(239, 68, 68, 0.85);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
